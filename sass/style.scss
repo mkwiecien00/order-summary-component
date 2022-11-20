@@ -1,0 +1,268 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	background-color: $baby-blue;
+	background-image: url('../img/pattern-background-mobile.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 40%;
+}
+
+// MAIN
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.order {
+	&__box {
+		margin: 1.5em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		max-width: 440px;
+		font-size: 1.3rem;
+		border-radius: 20px;
+		overflow: hidden;
+		text-align: center;
+		box-shadow: 0 15px 20px $dark-navy;
+
+		&-img {
+			min-height: 135px;
+			width: 100%;
+		}
+
+		&-info {
+			width: 100%;
+			padding: 1.5em;
+			background-color: $white;
+		}
+	}
+
+	&-title {
+		margin: 0.4em 0;
+		font-size: 2.2rem;
+		font-weight: 900;
+		color: $dark-blue;
+	}
+
+	&-text {
+		padding: 0.4em 1em;
+		line-height: 23px;
+		color: $grey;
+	}
+
+	&__plan-box {
+		display: flex;
+		flex-direction: row;
+		margin: 0.5em 0;
+		padding: 1.2em;
+		background-color: $blue;
+		border-radius: 10px;
+		justify-content: space-between;
+		align-items: center;
+
+		&-left {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		&-icon {
+			margin-right: 0.6em;
+			width: 30%;
+		}
+
+		&-details {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 0.1em;
+			font-size: 1.3rem;
+		}
+
+		&-name {
+			font-weight: bold;
+			color: $black;
+		}
+
+		&-price {
+			color: $grey;
+		}
+
+		&-link {
+			color: $dark-violet;
+			font-weight: bold;
+			font-size: 1.2rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $violet;
+			}
+		}
+	}
+
+	&-btn {
+		margin: 1em 0;
+		padding: 1em 3em;
+		color: $white;
+		font-size: 1.3rem;
+		font-weight: bold;
+		border-radius: 10px;
+		border: none;
+		background-color: $dark-violet;
+		font-family: 'Red Hat Display', sans-serif;
+		box-shadow: 0 15px 20px $navy;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $violet;
+		}
+	}
+
+	&-cancel-link {
+		display: block;
+		margin-top: 0.5em;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: $grey;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.footer {
+	font-size: 1rem;
+	margin-top: 1em;
+	padding: 1.5em;
+
+	&-link {
+		color: $dark-violet;
+	}
+}
+
+// MEDIA
+@media (min-width: 375px) {
+	.order {
+		&__box {
+			font-size: 1.4rem;
+		}
+
+		&-title {
+			font-size: 2.3rem;
+		}
+
+		&__plan-box {
+			&-details {
+				font-size: 1.4rem;
+			}
+
+			&-link {
+				font-size: 1.3rem;
+			}
+		}
+
+		&-btn {
+			padding: 1em 4em;
+			font-size: 1.4rem;
+		}
+
+		&-cancel-link {
+			font-size: 1.3rem;
+		}
+	}
+
+	.footer {
+		font-size: 1.1rem;
+	}
+}
+
+@media (min-width: 414px) {
+	.order {
+		&-btn {
+			padding: 1em 5em;
+		}
+
+		&__plan-box-icon {
+			margin-right: 0.8em;
+		}
+	}
+}
+
+@media (min-width: 450px) {
+	body {
+		background-image: url('../img/pattern-background-desktop.svg');
+		background-size: contain;
+	}
+
+	.order {
+		&__box {
+			margin: 0;
+			padding: 0;
+			font-size: 1.7rem;
+		}
+
+		&-title {
+			margin: 0.9em 0 0.4em;
+			font-size: 2.7rem;
+		}
+
+		&-text {
+			line-height: 25px;
+		}
+
+		&__plan-box {
+			margin: 0.9em 1.5em;
+			padding: 1.4em 1.5em;
+
+			&-icon {
+				margin-right: 0.8em;
+			}
+
+			&-details {
+				gap: 0.2em;
+				font-size: 1.7rem;
+			}
+
+			&-link {
+				font-size: 1.5rem;
+			}
+		}
+
+		&-btn {
+			padding: 1em 6.5em;
+			font-size: 1.5rem;
+		}
+
+		&-cancel-link {
+			margin: 0.6em 0 0.9em;
+			font-size: 1.5rem;
+		}
+	}
+
+	.footer {
+		font-size: 1.3rem;
+	}
+}
