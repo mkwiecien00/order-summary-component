@@ -17,7 +17,7 @@ body {
 	background-color: $baby-blue;
 	background-image: url('../img/pattern-background-mobile.svg');
 	background-repeat: no-repeat;
-	background-size: 100% 40%;
+	background-size: contain;
 }
 
 // MAIN
@@ -214,7 +214,6 @@ body {
 @media (min-width: 450px) {
 	body {
 		background-image: url('../img/pattern-background-desktop.svg');
-		background-size: contain;
 	}
 
 	.order {

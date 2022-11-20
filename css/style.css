@@ -15,7 +15,7 @@ body {
   background-color: #e0e8ff;
   background-image: url("../img/pattern-background-mobile.svg");
   background-repeat: no-repeat;
-  background-size: 100% 40%;
+  background-size: contain;
 }
 
 .main {
@@ -176,7 +176,6 @@ body {
 @media (min-width: 450px) {
   body {
     background-image: url("../img/pattern-background-desktop.svg");
-    background-size: contain;
   }
   .order__box {
     margin: 0;
